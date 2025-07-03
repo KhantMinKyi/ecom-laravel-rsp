@@ -47,8 +47,8 @@ const carouselData: CarouselSlide[] = [
     secondaryButtonLink: "/lookbooks/shoes-2025",
     imageSrc:
       "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80",
-    textColor: "text-gray-900",
-    overlayColor: "from-white/80 to-white/40",
+    textColor: "text-gray-900 dark:text-white",
+    overlayColor: "from-white/80 to-white/40 dark:from-gray-500/80 dark:to-gray-500/10",
     alignment: "left",
     badge: "NEW ARRIVAL",
     price: "$299",
@@ -67,8 +67,8 @@ const carouselData: CarouselSlide[] = [
     secondaryButtonLink: "/about/craftsmanship",
     imageSrc:
       "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80",
-    textColor: "text-gray-900",
-    overlayColor: "from-gray-100/80 to-gray-50/60",
+    textColor: "text-gray-900 dark:text-white",
+    overlayColor: "from-gray-100/80 to-gray-50/60 dark:from-gray-500/80 dark:to-gray-500/10",
     alignment: "right",
     badge: "PREMIUM",
     price: "$1,299",
@@ -87,8 +87,8 @@ const carouselData: CarouselSlide[] = [
     secondaryButtonLink: "/materials/premium-leather",
     imageSrc:
       "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80",
-    textColor: "text-gray-900",
-    overlayColor: "from-amber-50/70 to-white/40",
+    textColor: "text-gray-900 dark:text-white",
+    overlayColor: "from-amber-50/70 to-white/40 dark:from-gray-500/80 dark:to-gray-500/10",
     alignment: "left",
     badge: "EXCLUSIVE",
     price: "$899",
@@ -222,7 +222,7 @@ export default function ShopBanner(): JSX.Element {
                       : "mr-auto ml-0"
                   }`}
                 >
-                  <div className="backdrop-blur-sm bg-white/30 p-6 md:p-8 lg:p-10 rounded-2xl shadow-xl border border-white/50">
+                  <div className="backdrop-blur-sm bg-white/30 p-6 md:p-8 lg:p-10 rounded-2xl shadow-xl border border-white/50 dark:bg-black/70 dark:border-black/30">
 
                     {/* Title */}
                     <h2
@@ -245,11 +245,11 @@ export default function ShopBanner(): JSX.Element {
                     {slide.price && (
                       <div className="mb-6 inline-block bg-black/10 backdrop-blur-sm px-4 py-2 rounded-lg">
                         <div className="flex items-center gap-3">
-                          <span className="text-2xl font-bold text-gray-900">
+                          <span className="text-2xl font-bold text-gray-900 dark:text-green-600">
                             {slide.price}
                           </span>
                           {slide.originalPrice && (
-                            <span className="text-base line-through text-gray-500">
+                            <span className="text-base line-through text-gray-500 dark:text-red-500">
                               {slide.originalPrice}
                             </span>
                           )}
@@ -279,7 +279,7 @@ export default function ShopBanner(): JSX.Element {
                           <Button
                             asChild
                             variant="outline"
-                            className="bg-white/50 border-gray-400 hover:bg-white/80 text-gray-800 px-6 py-2 h-12 text-base rounded-full transition-all duration-300 font-medium flex items-center"
+                            className="bg-white/50 border-gray-400 hover:bg-white/80 text-gray-800  dark:bg-black/50 dark:text-white dark:hover:bg-black/10 dark:hover:text-white dark:border-black/50 px-6 py-2 h-12 text-base rounded-full transition-all duration-300 font-medium flex items-center"
                           >
                             <Link href={slide.secondaryButtonLink}>
                               {slide.secondaryButtonText}

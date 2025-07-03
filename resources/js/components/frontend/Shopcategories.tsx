@@ -203,10 +203,10 @@ export default function ShopCategories() {
   return (
     <>
       {/* Hero Section with Clean Design */}
-      <div className="w-full bg-white relative overflow-hidden">
+      <div className="w-full bg-white relative overflow-hidden dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-20 md:py-24 relative z-10">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900  dark:text-gray-50 mb-6">
             Everything  <span className="text-green-600">You Need</span> ,
               <br />
               One  <span className="text-green-600">
@@ -222,7 +222,7 @@ export default function ShopCategories() {
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
               <Link
                 href="/pro-access"
-                className="bg-black hover:bg-gray-900 text-white font-medium py-3 px-8 rounded-full transition-all shadow-md hover:shadow-lg"
+                className="bg-black hover:bg-gray-900 text-white  font-medium py-3 px-8 rounded-full transition-all shadow-md hover:shadow-lg"
               >
                 Buy Now
               </Link>
@@ -238,7 +238,7 @@ export default function ShopCategories() {
       </div>
 
       {/* Categories Section with Premium Design */}
-      <div className="w-full py-16 px-4 md:px-8 bg-white">
+      <div className="w-full py-16 px-4 md:px-8 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div
@@ -248,7 +248,7 @@ export default function ShopCategories() {
           >
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-green-400">
                   Top categories
                 </h2>
                 <p className="text-gray-500 mt-2">
@@ -271,7 +271,7 @@ export default function ShopCategories() {
               <a
                 key={category.id}
                 href={`/category/${category.slug}`}
-                className="group flex items-center p-6 rounded-xl bg-white border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300"
+                className="group flex items-center p-6 rounded-xl bg-white border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300 dark:bg-gray-700 dark:border-gray-700"
                 onMouseEnter={() => setHoveredCategory(category.id)}
                 onMouseLeave={() => setHoveredCategory(null)}
                 style={{
@@ -283,13 +283,13 @@ export default function ShopCategories() {
               >
                 {/* Icon in circle with subtle gradient background */}
                 <div className="flex-shrink-0">
-                  <img className="w-16 h-16 flex items-center justify-center rounded-xl bg-gray-50 group-hover:bg-gray-100 transition-colors" src= {category.image} alt={category.name} />
+                  <img className="w-16 h-16 flex items-center justify-center rounded-xl bg-gray-50 group-hover:bg-gray-100 transition-colors  dark:bg-gray-800" src= {category.image} alt={category.name} />
                 </div>
 
                 {/* Content with flex-grow */}
                 <div className="ml-5 flex-grow">
                   <div className="flex items-center">
-                    <h3 className="text-base font-semibold text-gray-900">
+                    <h3 className="text-base font-semibold text-gray-900 dark:text-gray-950">
                       {category.name}
                     </h3>
                     {/* {category.isNew && (
@@ -309,10 +309,10 @@ export default function ShopCategories() {
                   </p> */}
 
                   <div className="mt-2 flex items-center justify-between">
-                    <span className="text-xs text-gray-400">
+                    <span className="text-xs text-gray-400 dark:text-gray-950">
                       {category.itemCount} items
                     </span>
-                    <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-gray-900 transform group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-gray-900 transform group-hover:translate-x-1 transition-all dark:text-gray-50" />
                   </div>
                 </div>
               </a>

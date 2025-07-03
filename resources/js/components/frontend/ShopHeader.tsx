@@ -212,7 +212,7 @@ export default function ShopHeader() {
         {/* Category links - desktop */}
         <div
           className={cn(
-            "bg-sky-100 border-b border-sky-100 transition-all duration-300 py-2 px-4 dark:bg-sky-900 dark:border-sky-800",
+            "bg-green-100 border-b border-green-100 transition-all duration-300 py-2 px-4 dark:bg-gray-600 dark:border-gray-600",
             isScrolled ? "md:hidden" : "block"
           )}
         >
