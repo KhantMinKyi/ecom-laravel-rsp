@@ -268,7 +268,7 @@ export default function ShopCategories() {
           {/* Premium Category Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category, idx) => (
-              <a
+              <Link
                 key={category.id}
                 href={`/category/${category.slug}`}
                 className="group flex items-center p-6 rounded-xl bg-white border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300 dark:bg-gray-700 dark:border-gray-700"
@@ -315,7 +315,7 @@ export default function ShopCategories() {
                     <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-gray-900 transform group-hover:translate-x-1 transition-all dark:text-gray-50" />
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
 
