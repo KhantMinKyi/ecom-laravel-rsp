@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import SimilarProducts from "@/components/frontend/SimilarProducts";
 import { SimilarProduct } from "@/types/product";
+import ShopFrontLayout from "@/layouts/shop-front-layout";
 
 // Types
 interface Product {
@@ -117,6 +118,7 @@ const ProductDetails = () => {
 
 
   return (
+    <ShopFrontLayout>
     <div className="max-w-7xl mx-auto px-4 py-8 bg-white">
       {/* Breadcrumb */}
       <nav className="flex mb-8 text-sm">
@@ -328,6 +330,7 @@ const ProductDetails = () => {
       {/* Similar Products */}
       <SimilarProducts similarProducts={similarProducts} />
     </div>
+    </ShopFrontLayout>
   );
 };
 
